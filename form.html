@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="../style/blog-style.css" >
+    <link rel="stylesheet" type="text/css" href="../style/form.css" >
+</head>
+
+<body>
+<div id="body-wrapper">
+
+        <header class="header">
+                <nav class="nav-container container">
+                    <ul class="nav-list">
+                        <li class="nav-item nav-home"><a href="index.html" >Home</a></li>
+                        <li class="nav-item"><a href="./form.html">Contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+
+    <div class="form-title">
+        <h2>M.Satoshi</h2>
+        <img src="image/face-selected.png" width="100px" class="profile-img"/>
+        <p class="profile-text">I am a Web Developer.</p>
+    </div>
+
+    <div class="form-wrapper">
+        <form action="#" method="post" name="form" onsubmit="">
+            <h1 class="contact-title">Contact Us</h1>
+            <p>let us know your questions, suggestions and concerns by filling out the contact bellow</p>
+            <div class="input-area">
+                <div class="input-block">
+                    <label>Your Name<span>Required</span></label>
+                    <input type="text" name="name" placeholder="Name" value="">
+                </div>
+                <div class="input-block">
+                    <label>Your E-mail<span>Required</span></label>
+                    <input type="text" name="email" placeholder="e.g guest@example.com" value="">
+                </div>
+                <div class="input-block">
+                    <label>Phone</label>
+                    <input type="text" name="tel" placeholder="e.g ### ### ###" value="">
+                </div>
+                <div class="input-block">
+                    <label>Message Subject<span>Required</span></label>
+                    <select name="item">
+                        <option value="">Select Item</option>
+                        <option value="questions">Questions</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <div class="input-block">
+                    <label>Message<span>Required</span></label>
+                    <textarea name="content" rows="5"></textarea>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+<footer class="footer">
+        <div class="footer-block container">
+            <p>(c)2019 M.Satoshi All Rights Reserved</p>
+        </div>
+</footer>
+
+</div>
+</body>
+</html>
