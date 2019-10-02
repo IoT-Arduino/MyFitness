@@ -20,7 +20,7 @@ figcaption {
 }
 
 .fig-left {
-  text-align: left;  
+  text-align: left;
 }
 
 /* posts */
@@ -135,25 +135,24 @@ td {
 .author-wrapper {
   display: flex;
   justify-content: flex-start;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   margin: 80px 20px;
   padding: 10px 10px;
   border: 1px solid #e5e5e5;
-  border-radius:3px;
+  border-radius: 3px;
 }
 
 .profile-img {
   margin: 10px 10px;
   padding: 10px 10px;
   border: 1px solid #777;
-  border-radius:50% 50%;
+  border-radius: 50% 50%;
 }
 
 .author-info {
   margin: 10px 10px;
   padding: 10px 10px;
 }
-
 
 /* Footer */
 .footer {
@@ -177,4 +176,3 @@ td {
   padding: 0;
   color: #777;
 }
-
