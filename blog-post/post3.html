@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../style/blog-style.css" >
+    <link rel="stylesheet" href="../style/blog-style.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <title>Training equipment and menu</title>
 </head>
 <body>
@@ -20,9 +21,9 @@
     </header>
         
     <section >
-        <div class="titleBar"></div>
-        <div class="titleBanner">
-            <h1>Training equipment and menu</h1>
+        <div class="title-bar"></div>
+        <div class="title-banner">
+            <h1 class="title-banner-text">Training equipment and menu</h1>
         </div>
             
         <div class="container">
@@ -33,7 +34,8 @@
             </p>
         
             <div class="contents">
-                <img src="../image/dumbel.jpg" class="post-top-image" />
+                <img src="../image/dumbel.jpg" class="post-top-image" alt="Dumbell" />
+                <figcaption> [ Dumbbell ] </figcaption>
                 <h2 class="post">Equipment</h2>
 
                 <p>The following equipment is required for muscle training at home.</p>
@@ -42,7 +44,9 @@
                 <p>Recently, a type that can switch weight with one touch has appeared. The price is high, but the big advantage is that there is no hassle to switch weights.</p>
 
                 <img src="../image/flex-dumbell.png" alt="flex-dumbell" width="30%"/><br />
-                <a href="https://www.harveynorman.com.au/powertrain-adjustable-dumbbell-pair-48kg.html">PowerTrain Adjustable Dumbbell Pair 48kg "Harvey Norman"</a>
+                <figcaption class="fig-left">
+                    <a href="https://www.harveynorman.com.au/powertrain-adjustable-dumbbell-pair-48kg.html">PowerTrain Adjustable Dumbbell Pair 48kg "Harvey Norman"</a>
+                </figcaption>
                     
 
                 <h3 class="post">Bench</h3>
@@ -71,16 +75,28 @@
                 <p>Also, when training, you need to be aware that you don't give a reaction and that you slowly move your weights and put a load on your muscles.</p>
 
                 </div>
+
+                <div class="author-wrapper">
+                        <img src="../image/face-selected.png" width="100px" class="profile-img" alt="abator"/>
+                        <div class="author-info">
+                            <p>M.Satoshi</p>
+                            <p>I am a Web Developer.</p>
+                            <p>Studying Udacity Front End Nanodegree Program</p>
+                        </div>
+                </div>
         
             </div>
-        
     </section>
             
     <footer class="footer">
-        <div class="footer-block container">
-            <p>(c)2019 M.Satoshi All Rights Reserved</p>
-        </div>
-    </footer>
+            <div class="footer-block container">
+                <p>(c)2019 M.Satoshi All Rights Reserved</p>
+                <div class="fa-icon-block">
+                    <a href="https://twitter.com/DengenT?lang=ja" class="fa-icon"><i class="fab fa-twitter-square fa-2x"></i></a>
+                    <a href="https://github.com/IoT-Arduino"  class="fa-icon"><i class="fab fa-github-square fa-2x"></i></a>
+                </div>
+            </div>
+        </footer>
             
 </div>    
 </body>

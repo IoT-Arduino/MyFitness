@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MyFitness</title>
-    <link rel="stylesheet" type="text/css" href="style/style.css" >
+    <link rel="stylesheet" href="style/style.css" >
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
@@ -35,28 +35,28 @@
             <ul>
                 <li class="pick-list">
                     <a href="blog-post/post1.html" class="pick-item">
-                        <img src="image/workout.jpg" class="pick-item-image" />
-                        <div class="pick-item-text">
-                            <h3>The basic principle of skinny to muscle</h3>
-                            <p>Muscle training alone does not increase weight. The real cause is dietary habits.First, the most important thing is that calorie intake exceeds calorie consumption....</p>
+                        <img src="image/workout.jpg" class="pick-item-image" alt="workout"/>
+                        <div class="pick-item-desc">
+                            <h3 class="pick-item-desc-ttl">The basic principle of skinny to muscle</h3>
+                            <p class="pick-item-desc-txt">Muscle training alone does not increase weight. The real cause is dietary habits.First, the most important thing is that calorie intake exceeds calorie consumption....</p>
                         </div>
                     </a>
                 </li>
                 <li class="pick-list">
                         <a href="blog-post/post2.html" class="pick-item">
-                            <img src="image/nutorition.jpg" class="pick-item-image" />
-                            <div class="pick-item-text">
-                                <h3>Characteristics of the three major nutrients and ideal intake balance.</h3>
-                                <p>The three major nutrients are proteins, carbohydrates, and lipids. In order to increase muscle....</p>
+                            <img src="image/nutorition.jpg" class="pick-item-image" alt="healty food" />
+                            <div class="pick-item-desc">
+                                <h3 class="pick-item-desc-ttl">Characteristics of the three major nutrients and ideal intake balance.</h3>
+                                <p class="pick-item-desc-txt">The three major nutrients are proteins, carbohydrates, and lipids. In order to increase muscle....</p>
                             </div>
                         </a>
                     </li>
                     <li class="pick-list">
                             <a href="blog-post/post3.html" class="pick-item">
-                                <img src="image/dumbel.jpg" class="pick-item-image" />
-                                <div class="pick-item-text">
-                                    <h3>Training equipment and menu</h3>
-                                    <p>The following equipment is required for muscle training at home.Dumbbell.Recently, a type that can switch weight with one touch has appeared. The price is high, ...</p>
+                                <img src="image/dumbel.jpg" class="pick-item-image" alt="Dumbell" />
+                                <div class="pick-item-desc">
+                                    <h3 class="pick-item-desc-ttl">Training equipment and menu</h3>
+                                    <p class="pick-item-desc-txt">The following equipment is required for muscle training at home.Dumbbell.Recently, a type that can switch weight with one touch has appeared. The price is high, ...</p>
                                 </div>
                             </a>
                         </li>
@@ -66,9 +66,9 @@
         <div class="category-block-wrapper">
                 <h3 class="category-title">Categories</h3>
                 <ul class="category-lists">
-                    <li><a href="#">Training</a></li>
-                    <li><a href="#">Nutorition</a></li>
-                    <li><a href="#">Equipments</a></li>
+                    <li><a href="#" class="category-lists-link">Training</a></li>
+                    <li><a href="#" class="category-lists-link">Nutorition</a></li>
+                    <li><a href="#" class="category-lists-link">Equipments</a></li>
                 </ul>
             </div>
     
@@ -79,16 +79,16 @@
 
         <div class="blocks-wrapper">
             <div class="block">
-                <h3>BMC</h3>
-                <p>Basal metabolism calculations are automatically displayed on recently sold scales. There are also sites that automatically calculate the necessary data.</p>
+                <h3 class="block-title">BMC</h3>
+                <p class="block-text">Basal metabolism calculations are automatically displayed on recently sold scales. There are also sites that automatically calculate the necessary data.</p>
                 <div class="mask">
                     <div class="caption"><i class="fas fa-arrow-circle-right"></i></div>
                 </div>
             </div>
 
             <div class="block">
-                <h3>The calorie balance</h3>
-                <p>Protein is twice the weight value
+                <h3 class="block-title">The calorie balance</h3>
+                <p class="block-text">Protein is twice the weight value
                     Lipid is 25% of total calories
                     Carbohydrates are total calories minus protein and fat calories.</p>
                 <div class="mask">
@@ -97,8 +97,8 @@
             </div>
 
             <div class="block">
-                <h3>Training Menus</h3>
-                <p>Relationship between training frequency and load: Increasing the number of times with a lightweight does not increase muscle mass. </p>
+                <h3 class="block-title">Training Menus</h3>
+                <p class="block-text">Relationship between training frequency and load: Increasing the number of times with a lightweight does not increase muscle mass. </p>
                 <div class="mask">
                     <div class="caption"><i class="fas fa-arrow-circle-right"></i></div>
                 </div>
@@ -112,6 +112,10 @@
 <footer class="footer">
     <div class="footer-block container">
         <p class="footer-text">(c)2019 M.Satoshi All Rights Reserved</p>
+        <div class="fa-icon-block">
+            <a href="https://twitter.com/DengenT?lang=ja" class="fa-icon"><i class="fab fa-twitter-square fa-2x"></i></a>
+            <a href="https://github.com/IoT-Arduino"  class="fa-icon"><i class="fab fa-github-square fa-2x"></i></a>
+        </div>
     </div>
 </footer>
 
