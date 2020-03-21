@@ -3,7 +3,7 @@
   MyFitness(英語)
 </h1>
 
-## 💫 DemoSiteのアドレスと内容
+## 💫 DemoSiteのアドレス
 
 [MyFitness](https://frontend-nano-01.netlify.com/)
 
@@ -11,9 +11,8 @@
 
 ## 🧐 プログラム・フォルダ構成
 
-AirTableのデータベースから、各地方自治体毎の選挙区情報のページを自動作成。  
-数値データのグラフ表示はChart.jsを使用。  
-CSSはtailwindcssを使用。  
+シンプルにHTML/CSSで実装。
+問い合わせフォームはNetlifyFormを使用しています。
 
 src/  
 　├ blog-post/  
@@ -29,7 +28,7 @@ src/
 
 3.  **`style/`**: CSSファイル
 
-4.  **`form.html`**: 問い合わせフォーム
+4.  **`form.html`**: 問い合わせフォーム（NetlifyFormを使用）
 
 5.  **`index.html`**: トップページ
 
@@ -37,12 +36,8 @@ src/
 
 ## References 
 
-* [Gatsby.js Official](https://www.gatsbyjs.org/)
-* [Airtable](https://www.airtable.com/)
-* [tailwindcss](https://tailwindcss.com/)
-* [tailwind CheetSheet](https://nerdcave.com/tailwind-cheat-sheet)
-* [Chart.js](https://www.chartjs.org/)
-* [react-chartjs-2](https://github.com/jerairrest/react-chartjs-2)
+* [Netlify](https://www.netlify.com/)
+
 
 
 ## 🚀 Deploy
