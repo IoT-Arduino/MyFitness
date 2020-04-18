@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "ProteinConcentrate",
+        "price": 10.99,
+        "weight": 15.00,
+        "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "AdvancedProtein",
+        "price": 12.99,
+        "weight": 15.00,
+        "image": { "fields": { "file": { "url": "./images/product-2.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "GoldWheyProtein",
+        "price": 12.99,
+        "weight": 15.00,
+        "image": { "fields": { "file": { "url": "./images/product-3.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "FusionProtein",
+        "price": 22.99,
+        "weight": 15.00,
+        "image": { "fields": { "file": { "url": "./images/product-4.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "AdjustableDumbel",
+        "price": 88.99,
+        "weight": 15.00,
+        "image": { "fields": { "file": { "url": "./images/product-5.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "AdjustableInclineBench",
+        "price": 102.99,
+        "weight": 15.00,
+        "image": { "fields": { "file": { "url": "./images/product-6.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "AdjustableDumbelSquare",
+        "price": 145.99,
+        "weight": 15.00,
+        "image": { "fields": { "file": { "url": "./images/product-7.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "SimpleIncrineBench ",
+        "price": 93.99,
+        "weight": 15.00,
+        "image": { "fields": { "file": { "url": "./images/product-8.jpeg" } } }
+      }
+    }
+  ]
+}

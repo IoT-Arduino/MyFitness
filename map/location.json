@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "fields": {
+        "id": "1",
+        "category": "24h",
+        "title": "Anyware Fitness Club",
+        "latitude": 37.788344,
+        "longitude": -122.424017,
+        "address":"Bush St, San Francisco, CA 94109 ",
+        "image": { "fields": { "file": { "url": "./images/gym-1.jpeg" } } }
+      }
+    },
+    {
+      "fields": {
+        "id": "2",
+        "category": "12h",
+        "title": "365days Fitness Gym",
+        "latitude": 37.773806,
+        "longitude": -122.422815,
+        "address":"Gough St, San Francisco, CA 94102",
+        "image": { "fields": { "file": { "url": "./images/gym-2.jpeg" } } }
+      }
+    },
+    {
+      "fields": {
+        "id": "3",
+        "category": "24h",
+        "title": "Ninja Gym Studio",
+        "latitude": 37.784590,
+        "longitude": -122.407955,
+        "address":"Cyril Magnin St, San Francisco, CA 94102",
+        "image": { "fields": { "file": { "url": "./images/gym-3.jpeg" } } }
+      }
+    },
+    {
+      "fields": {
+        "id": "4" ,
+        "category": "12h",
+        "title": "Gold Musle Fitness",
+        "latitude": 37.780378,
+        "longitude": -122.391010,
+        "address":"Townsend St, San Francisco, CA 94107 ",
+        "image": { "fields": { "file": { "url": "./images/gym-4.jpeg" } } }
+      }
+    },
+    {
+      "fields": {
+        "id": "5",
+        "category": "24h",
+        "title": "MyFitness Studio",
+        "latitude": 37.799650,
+        "longitude": -122.399963,
+        "address":"125 Vallejo St, San Francisco, CA 94111",
+        "image": { "fields": { "file": { "url": "./images/gym-5.jpeg" } } }
+      }
+    }
+  ]
+}

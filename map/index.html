@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyFitness Gym Map</title>
+  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <body>
+
+    <header class="header-wrapper">
+      <nav class="nav-container container">
+          <ul class="nav-list">
+              <li class="nav-item nav-home"><a href="../index.html" >Home</a></li>
+              <li class="nav-item"><a href="../form.html">Contact</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <section class="mapContainer">
+
+      <div class="section-title">
+        <h2>MyFitness Gym Map</h2>
+        <p>Click marker or Click list down below</p>
+        <p>The markers on the map are linked to the list.</p>
+      </div>
+
+      <div class="mapComponent">
+        <div id="map_canvas"></div>
+      </div>
+
+      <ul id="mapList">
+      </ul>
+
+    </section>
+
+  <footer class="footer-wrapper">
+    <div class="footer-block container">
+        <p class="footer-text">(c)2019 @Maruo All Rights Reserved</p>
+        <div class="fa-icon-block">
+            <a href="https://twitter.com/DengenT?lang=ja" class="fa-icon"><i class="fab fa-twitter-square fa-2x"></i></a>
+            <a href="https://github.com/IoT-Arduino"  class="fa-icon"><i class="fab fa-github-square fa-2x"></i></a>
+        </div>
+    </div>
+  </footer>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYmI7JSNYMi4JnQKe067xmt2ltJVC709s&language=en"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

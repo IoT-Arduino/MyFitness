@@ -1,18 +1,6 @@
 @import url("./base.css");
 @import url("./header.css");
-@import url("./blog-style.css");
-
-/* html {
-  font-size: 62.5%;
-} */
-/* body {
-  box-sizing: border-box;
-  max-width: 980px;
-  margin: auto;
-  padding: 15px;
-  font-size: 1.4rem;
-  font-family: sans-serif;
-} */
+@import url("./footer-2.css");
 
 #body-wrapper {
   background: #f7f6f1;
