@@ -1,6 +1,6 @@
-@import url("./base.css");
-@import url("./header.css");
-@import url("./footer-2.css");
+@import url("../style/base.css");
+@import url("../style/header.css");
+@import url("../style/footer-2.css");
 
 #body-wrapper {
   background: #f7f6f1;
@@ -97,6 +97,21 @@ form > div select {
 form > div textarea {
   height: auto;
 }
+
+/* error style */
+
+.dsNone {
+  display: none;
+}
+
+.is-invalid {
+  display: block;
+  text-align: center;
+  color: red;
+}
+
+
+/* end error style */
 
 button {
   display: block;

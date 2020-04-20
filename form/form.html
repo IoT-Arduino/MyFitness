@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Form</title>
-    <link rel="stylesheet" href="../style/form.css" >
+    <link rel="stylesheet" href="form.css" >
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 
@@ -15,7 +15,7 @@
         <header class="header-wrapper">
                 <nav class="nav-container container">
                     <ul class="nav-list">
-                        <li class="nav-item nav-home"><a href="index.html" >Home</a></li>
+                        <li class="nav-item nav-home"><a href="../index.html" >Home</a></li>
                         <li class="nav-item"><a href="./form.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -23,7 +23,7 @@
 
     <div class="form-title">
         <h2 class="form-title-header">@Maruo</h2>
-        <img src="image/face-selected.png" class="profile-img" alt="abator"/>
+        <img src="../image/face-selected.png" class="profile-img" alt="abator"/>
         <p class="profile-text">I am a Web Developer.</p>
     </div>
 
@@ -34,11 +34,19 @@
             <div class="input-area">
                 <div class="input-block">
                     <label>Your Name<span>Required</span></label>
-                    <input type="text" name="name" placeholder="Name" value="">
+                    <input type="text" id="name" name="name" placeholder="Name" value="">
+                    <div></div>
+                    <div class="dsNone" id="nameError">
+                        Name must be between 2 and 15 characters
+                    </div>
                 </div>
                 <div class="input-block">
                     <label>Your E-mail<span>Required</span></label>
-                    <input type="text" name="email" placeholder="e.g guest@example.com" value="">
+                    <input type="text" name="email" id="email" placeholder="e.g guest@example.com" value="">
+                    <div></div>
+                    <div class="dsNone" id="emailError">
+                        Enter a valid email
+                    </div>
                 </div>
                 <div class="input-block">
                     <label>Phone</label>
@@ -46,15 +54,23 @@
                 </div>
                 <div class="input-block">
                     <label>Message Subject<span>Required</span></label>
-                    <select name="item">
+                    <select name="item" id="select">
                         <option value="">Select Item</option>
                         <option value="questions">Questions</option>
                         <option value="Others">Others</option>
                     </select>
+                    <div></div>
+                    <div class="dsNone" id="selectError">
+                        Please select option
+                    </div>
                 </div>
                 <div class="input-block">
                     <label>Message<span>Required</span></label>
-                    <textarea name="content" rows="5"></textarea>
+                    <textarea name="content" id="textArea" rows="5"></textarea>
+                    <div></div>
+                    <div class="dsNone" id="textError">
+                        Please enter message
+                    </div>
                 </div>
             </div>
             <button type="submit">Submit</button>
@@ -72,5 +88,7 @@
     </footer>
 
 </div>
+
+<script src="form.js"></script>
 </body>
 </html>
