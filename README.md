@@ -5,7 +5,7 @@
 
 ## 💫 DemoSiteのアドレス
 
-[MyFitness](https://frontend-nano-01.netlify.com/)
+[MyFitness](https://myfitness-site.netlify.app/)
 
 
 
