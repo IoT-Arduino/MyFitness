@@ -44,9 +44,9 @@ function initMap() {
   )
 
   const markers = new GetData()
+  // marker配列データからマーカーの作成およびli要素の作成
   markers
     .getLocation()
-    // jsonデータからマーカーの作成およびli要素の作成
     .then((items) => {
       items.forEach((item) => {
         const id = item.id
