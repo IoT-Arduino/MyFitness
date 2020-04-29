@@ -1,15 +1,15 @@
-const currentWindow = null
 const maplist = new Array()
-let cnt = 0
-let maplistUl = document.getElementById("mapList")
+const maplistUl = document.getElementById("mapList")
 let maplistLi = document.querySelectorAll("#mapList li")
+let currentWindow = null
+let cnt = 0
 
 //　LocationのJSONデータの取得
 class GetData {
   async getLocation() {
     try {
-      let result = await fetch("location.json")
-      let data = await result.json()
+      const result = await fetch("location.json")
+      const data = await result.json()
       let markers = data.items
 
       markers = markers.map((item) => {
@@ -33,12 +33,12 @@ class GetData {
 
 //　Mapの初期化
 function initMap() {
-  let myOptions = {
+  const myOptions = {
     zoom: 13,
     center: new google.maps.LatLng(37.789096, -122.40217),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   }
-  let map = new google.maps.Map(
+  const map = new google.maps.Map(
     document.getElementById("map_canvas"),
     myOptions
   )
@@ -73,14 +73,13 @@ function initMap() {
 
 //　markerをクリックしたときの処理
 function createMarker(name, latlng, map, id) {
-  let infoWindow = new google.maps.InfoWindow()
-  let marker = new google.maps.Marker({ position: latlng, map: map })
+  const infoWindow = new google.maps.InfoWindow()
+  const marker = new google.maps.Marker({ position: latlng, map: map })
 
   google.maps.event.addListener(marker, "click", function (e) {
     // クリック済みのMakerに対応するliリストのCSS背景を初期化
     maplistLi.forEach((item) => {
       if (item.classList.contains("clicked")) {
-        console.log(item.textContent + "removed")
         item.classList.remove("clicked")
       }
     })
