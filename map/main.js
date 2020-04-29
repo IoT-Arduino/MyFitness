@@ -66,8 +66,8 @@ function initMap() {
 
 //　markerをクリックしたときの処理
 function createMarker(name, latlng, map,id) {
-  const infoWindow = new google.maps.InfoWindow()
-  const marker = new google.maps.Marker({ position: latlng, map: map })
+  let infoWindow = new google.maps.InfoWindow()
+  let marker = new google.maps.Marker({ position: latlng, map: map })
 
   google.maps.event.addListener(marker, "click", function(e) {
 
