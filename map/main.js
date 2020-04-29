@@ -7,7 +7,7 @@ var maplistLi = document.querySelectorAll('#mapList li')
 
 //　JSONデータの取得
 class GetData {
-  async getProducts() {
+  async getLocation() {
     try {
       let result = await fetch("location.json")
       let data = await result.json()
@@ -41,7 +41,7 @@ function initMap() {
 
   const markers = new GetData()
 
-  markers.getProducts()
+  markers.getLocation()
   .then( items => {
     
     items.forEach( item => {
