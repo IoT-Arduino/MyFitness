@@ -1,0 +1,108 @@
+/* 例示用のスタイル */
+html {
+    font-size: 62.5%;
+}
+body {
+    box-sizing: border-box;
+    max-width: 980px;
+    margin: auto;
+    padding: 15px;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+}
+code {
+    padding: 0.2rem;
+    background: hsl(0, 0%, 95%);
+    font-size: 1.4rem;
+    font-family: consolas, monospace;
+}
+
+.message {
+    padding: 10px 0;
+}
+
+/** 入力項目 */
+input, textarea, select {
+    font: inherit;
+    margin: 0;
+    vertical-align: middle;
+    border: 1px solid #bbb;
+}
+@media (max-width: 680px) {
+    input, textarea, select {
+        font-size: 1.6rem;
+    }
+}
+/** 手入力、選択肢 */
+input, select {
+    padding: 4px 6px;
+    max-width: 100%;
+}
+/** テキストエリア */
+textarea {
+    padding: 4px 6px;
+}
+
+/** 入力項目を伸ばす */
+.full-field {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/** ボタン */
+button {
+    font: inherit;
+    margin: 0;
+    padding: 8px 20px;
+    border: none;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    background: #e0e0e0;
+    vertical-align: middle;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.2s all;
+    user-select: none;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+/** ラベル */
+label {
+    cursor: pointer;
+}
+
+/** フォーム */
+form {
+    font-size: 13px;
+}
+/** フォームテーブル */
+form table {
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+form th, form td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-weight: normal;
+    vertical-align: middle;
+}
+form th {
+    background: #f9f9f9;
+    text-align: right;
+    width: 30%;
+}
+
+/** 必須マーク */
+.require-mark {
+    color: red;
+}
+
+/** フォーム下部 */
+.form-footer {
+    margin-bottom: 30px;
+    text-align: center;
+}

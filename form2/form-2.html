@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js サンプル: フォーム (確認画面付き)</title>
+    <link rel="stylesheet" href="./form.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div id="body-wrapper">
+
+    <header class="header-wrapper">
+        <nav class="nav-container container">
+            <ul class="nav-list">
+                <li class="nav-item nav-home"><a href="index.html" >Home</a></li>
+                <li class="nav-item"><a href="./form.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-title">
+        <h2 class="form-title-header">@Maruo</h2>
+        <!-- <img src="image/face-selected.png" class="profile-img" alt="abator"/> -->
+        <p class="profile-text">I am a Web Developer.</p>
+    </div>
+
+    <div id="app">
+        <form action="#" method="post" name="form2" onsubmit="" netlify>
+            <h1 class="contact-title">Contact Us</h1>
+            <div class="message">
+                <span v-if="confirmMode">
+                    Please confirm the information bellown and Click send button
+                </span>
+                <span v-else>
+                    let us know your questions, suggestions and concerns by filling out the contact bellow
+                </span>
+            </div>
+            <table>
+                <tr><th>氏名 <span class="require-mark">※</span></th><td>
+                    <span v-if="confirmMode">
+                        {{sei}} {{mei}}
+                    </span>
+                    <span v-else>
+                        姓 <input type="text" name="sei" size="10" placeholder="山田" required v-model="sei">
+                        　名 <input type="text" name="mei" size="10" placeholder="太郎" required v-model="mei">
+                    </span>
+                </td></tr>
+
+              
+                <tr><th>メールアドレス</th><td>
+                    <span v-if="confirmMode">
+                        {{email}}
+                    </span>
+                    <span v-else>
+                        <input type="email" name="email" placeholder="xxx@example.com" size="40" v-model="email">
+                    </span>
+                </td></tr>
+                    
+                <tr><th>郵便番号</th><td>
+                    <span v-if="confirmMode">
+                        <span v-if="postal1 && postal2">
+                            〒 {{postal1}}-{{postal2}}
+                        </span>
+                    </span>
+                    <span v-else>
+                        〒 <input type="text" name="postal1" size="3" minlength="3" maxlength="3" placeholder="123" v-model="postal1">
+                        - <input type="text" name="postal2" size="4" minlength="4" maxlength="4" placeholder="4567" v-model="postal2">
+                    </span>
+                </td></tr>
+
+                <tr><th>市区町村</th><td>
+                    <span v-if="confirmMode">
+                        {{city}}
+                    </span>
+                    <span v-else>
+                        <input type="text" name="city" class="full-field" placeholder="○○市○○町" v-model="city">
+                    </span>
+                </td></tr>
+
+                <tr><th>番地・建物名</th><td>
+                    <span v-if="confirmMode">
+                        {{street}}
+                    </span>
+                    <span v-else>
+                        <input type="text" name="street" class="full-field" placeholder="1-2-3 ○○マンション 123" v-model="street">
+                    </span>
+                </td></tr>
+                
+                <tr><th>電話番号</th><td>
+                    <span v-if="confirmMode">
+                        <span v-if="tel1 && tel2 && tel3">
+                            {{tel1}}-{{tel2}}-{{tel3}}
+                        </span>
+                    </span>
+                    <span v-else>
+                        <input type="text" name="tel1" size="4" placeholder="012" v-model="tel1">
+                        - <input type="text" name="tel2" size="4" placeholder="3456" v-model="tel2">
+                        - <input type="text" name="tel3" size="4" placeholder="7890" v-model="tel3">
+                    </span>
+                </td></tr>
+            </table>
+
+            <div class="form-footer">
+                <button type="button" @click="back" v-if="confirmMode">戻る</button>
+                <button type="submit"  v-if="confirmMode">送信</button>
+            </div>
+            
+        </form>
+        
+        <button type="click" @click="click" v-if="!confirmMode">確認</button>
+
+
+        <footer class="footer">
+            <div class="footer-block container">
+                <p>(c)2019 @Maruo All Rights Reserved</p>
+                <div class="fa-icon-block">
+                    <a href="https://twitter.com/DengenT?lang=ja" class="fa-icon"><i class="fab fa-twitter-square fa-2x"></i></a>
+                    <a href="https://github.com/IoT-Arduino"  class="fa-icon"><i class="fab fa-github-square fa-2x"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                // 確認画面か
+                confirmMode: false,
+
+                // 入力項目の値
+                sei: '',
+                mei: '',
+                email: '',
+                postal1: '',
+                postal2: '',
+                city: '',
+                street: '',
+                tel1: '',
+                tel2: '',
+                tel3: '',
+            },
+            methods: {
+                /**
+                 * フォーム送信時
+                 */
+                click: function() {
+                    this.confirmMode = true;
+                    console.log(this.confirmMode)
+                },
+                /**
+                 * 「戻る」ボタンクリック時
+                 */
+                back: function() {
+                    this.confirmMode = false;
+                }
+                // submit: function(e){
+                //     if (!this.confirmMode) {
+                //         this.confirmMode = true;
+                //         e.preventDefault();
+                //     }
+                //     else {
+                //         // 送信
+                //         console.log("submitted")
+                //     }
+                // }
+            }
+        });
+    </script>
+
+
+    </div>
+</body>
+</html>
