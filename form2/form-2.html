@@ -108,7 +108,8 @@
 
             <div class="form-footer">
                 <button type="button" @click="back" v-if="confirmMode">戻る</button>
-                <button type="submit"  v-if="confirmMode">送信</button>
+                <!-- <button type="submit"  v-if="confirmMode">送信</button> -->
+                <button type="submit">送信</button>
             </div>
             
         </form>
@@ -166,17 +167,17 @@
                  */
                 back: function() {
                     this.confirmMode = false;
+                },
+                submit: function(e){
+                    if (!this.confirmMode) {
+                        this.confirmMode = true;
+                        e.preventDefault();
+                    }
+                    else {
+                        // 送信
+                        console.log("submitted")
+                    }
                 }
-                // submit: function(e){
-                //     if (!this.confirmMode) {
-                //         this.confirmMode = true;
-                //         e.preventDefault();
-                //     }
-                //     else {
-                //         // 送信
-                //         console.log("submitted")
-                //     }
-                // }
             }
         });
     </script>
