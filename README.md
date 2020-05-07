@@ -5,38 +5,67 @@
 
 ## 💫 DemoSiteのアドレス
 
-[MyFitness](https://myfitness-site.netlify.app/)
+[MyFitnessTopPage](https://myfitness-site.netlify.app/)
+[GoogleMapAPIを使用したページ](https://myfitness-site.netlify.app/map/index.html)
+[SnipcartAPIを使用したカートページ](https://myfitness-site.netlify.app/cart/index.html)
 
+
+## 💫 コード解説記事
+
+[GoogleMap のマーカーと、HTMLのリストデータの連動（Vanilla JavaScript)](https://myfrontend.netlify.app/interactive-google-map-marker)
+
+[外付けカート(snipcart）機能を追加しました](https://myfrontend.netlify.app/add-snipcart)
 
 
 ## 🧐 プログラム・フォルダ構成
 
 シンプルにHTML/CSSで実装。
-問い合わせフォームはNetlifyFormを使用しています。
+以下のページで外部APIを使用しています。
+- Mapページ:Google Maps JavaScript API
+- Cartページ:SnipcartAPI
+- formページ:NetlifyForm
 
-src/  
-　├ blog-post/  
-　├ image/  
-　├ style/  
-　├ form.html 
-　└ index.html
+index.html
+blog-post/
+image/
+style/
+map/  
+　├ images/  
+　├ index.html 
+　├ location.json 
+　├ main.js 
+　└ style.css
+cart/  
+　├ images/  
+　├ index.html 
+　├ products.json 
+　├ app.js 
+　└ style.css
+form/  
+　├ form.html  
+　├ thankyou.html  
+　├ form.js 
+　└ form.css
   
+1.  **`index.html`**: トップページ
   
-1.  **`blog-post`**: ブログポストファイル
+2.  **`blog-post`**: ブログポストファイル
 
-2.  **`image/`**: 画像ファイルを保存するフォルダ。
+3.  **`image/`**: 画像ファイルを保存するフォルダ。
 
-3.  **`style/`**: CSSファイル
+4.  **`style/`**: CSSファイル
 
-4.  **`form.html`**: 問い合わせフォーム（NetlifyFormを使用）
+5.  **`map/`**: GooleMap関連フォルダ
 
-5.  **`index.html`**: トップページ
+6.  **`cart/`**: ショッピングカート関連フォルダ  
 
-  
+7.  **`form/`**: 問い合わせフォーム関連フォルダ
 
 ## References 
 
-* [Netlify](https://www.netlify.com/)
+* [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial?hl=ja)
+* [Snipcart Documentation](https://docs.snipcart.com/v3/)
+* [Netlify Forms](https://www.netlify.com/products/forms/)
 
 
 

@@ -98,21 +98,4 @@ function createMarker(name, latlng, map, id) {
   maplist[cnt++] = marker
 }
 
-// ***** JQuery Sample *****
-// $(function(){
-//   $('#mapList li').click(function(){
-//   var no = $('#mapList li').index(this);
-//   google.maps.event.trigger(maplist[no], "click");
-//   });
-// });
-
-// ***** VanillaJS で書き換え*****
-// document.addEventListener('DOMContentLoaded', function() {
-//   maplistLi.forEach((listItem,index) => {
-//     listItem.addEventListener('click',()=>{
-//      google.maps.event.trigger(maplist[index], "click");
-//    })
-//   })
-// });
-
 google.maps.event.addDomListener(window, "load", initMap)
