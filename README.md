@@ -5,9 +5,9 @@
 
 ## 💫 DemoSiteのアドレス
 
-[MyFitnessTopPage](https://myfitness-site.netlify.app/)
-[GoogleMapAPIを使用したページ](https://myfitness-site.netlify.app/map/index.html)
-[SnipcartAPIを使用したカートページ](https://myfitness-site.netlify.app/cart/index.html)
+[MyFitnessTopPage](https://myfitness-site.netlify.app/)  
+[GoogleMapAPIを使用したページ](https://myfitness-site.netlify.app/map/index.html)  
+[SnipcartAPIを使用したカートページ](https://myfitness-site.netlify.app/cart/index.html)  
 
 
 ## 💫 コード解説記事
@@ -31,21 +31,21 @@ image/
 style/
 map/  
 　├ images/  
-　├ index.html 
-　├ location.json 
-　├ main.js 
-　└ style.css
+　├ index.html  
+　├ location.json  
+　├ main.js  
+　└ style.css  
 cart/  
 　├ images/  
-　├ index.html 
-　├ products.json 
-　├ app.js 
-　└ style.css
+　├ index.html  
+　├ products.json  
+　├ app.js  
+　└ style.css  
 form/  
 　├ form.html  
 　├ thankyou.html  
-　├ form.js 
-　└ form.css
+　├ form.js  
+　└ form.css  
   
 1.  **`index.html`**: トップページ
   
