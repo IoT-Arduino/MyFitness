@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="formStyle.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+<div id="body-wrapper">
+
+        <header class="header-wrapper">
+                <nav class="nav-container container">
+                    <ul class="nav-list">
+                        <li class="nav-item nav-home"><a href="../index.html" >Home</a></li>
+                        <li class="nav-item"><a href="./index.html">Contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+
+    <div class="form-title">
+        <h2 class="form-title-header">@Maruo</h2>
+        <img src="../image/face-selected.png" class="profile-img" alt="abator"/>
+        <p class="profile-text">I am a Web Developer.</p>
+    </div>
+
+    <div class="form-wrapper">
+        <form action="/form/thankyou.html" method="post" name="form" onsubmit="" netlify>
+
+        <!--フォームの入力部分-->
+        <div id="ContactInput">
+
+            <h1 class="contact-title">Contact Us</h1>
+            <p>let us know your questions, suggestions and concerns by filling out the contact below</p>
+            <div class="input-area">
+                <div class="input-block">
+                    <label>Your Name<span>Required</span></label>
+                    <input type="text" id="name" name="name" placeholder="Name" value="">
+                    <div></div>
+                    <div class="dsNone" id="nameError">
+                        Name must be between 2 and 15 characters
+                    </div>
+                </div>
+                <div class="input-block">
+                    <label>Your E-mail<span>Required</span></label>
+                    <input type="text" name="email" id="email" placeholder="e.g guest@example.com" value="">
+                    <div></div>
+                    <div class="dsNone" id="emailError">
+                        Enter a valid email
+                    </div>
+                </div>
+                <div class="input-block">
+                    <label class="input-tag-middle">Phone</label>
+                    <input type="text" name="tel" id="tel" placeholder="e.g ### ### ###" value="">
+                </div>
+
+                <div class="input-block">
+                    <label class="input-tag-middle">MemberStatus</label>
+                    <div class="input-element">
+                        <label><input type="radio" name="membership" value="regular" />Regular</label><br />
+                        <label><input type="radio" name="membership" value="premium" />Premium</label>
+                    </div>
+                    <div></div>
+                </div>
+
+                <div class="input-block">
+                    <label class="input-tag-middle">Contact Method</label>
+                    <div class="input-element">
+                        <label><input type="checkbox" name="ContactMethod[]" value="SMS" />SMS</label><br />
+                        <label><input type="checkbox" name="ContactMethod[]" value="PhoneCall" />PhoneCall</label><br />
+                        <label><input type="checkbox" name="ContactMethod[]" value="e-mail" />e-mail</label>
+                    </div>
+                    <div></div>
+                </div>
+
+                <div class="input-block">
+                    <label>Message Subject<span>Required</span></label>
+                    <select name="item" id="select">
+                        <option value="">Select Item</option>
+                        <option value="questions">Questions</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <div></div>
+                    <div class="dsNone" id="selectError">
+                        Please select option
+                    </div>
+                </div>
+
+                <div class="input-block">
+                    <label>Message<span>Required</span></label>
+                    <textarea name="content" id="textArea" rows="5"></textarea>
+                    <div></div>
+                    <div class="dsNone" id="textError">
+                        Please enter message
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttonArea">
+                <div class="btnStyle"><a id="BtConfirm">Confirm</a></div>
+                <div class="btnStyleCnl" id="BtReset" >Reset</div>
+            </div>
+        </div> 
+
+        <!-- end input 部分 -->
+
+        <!--確認画面|-->
+        <div id="ContactConfirm">
+
+            <h1 class="contact-title">Confirmation</h1>
+            <p>Please check the items below before submit</p>
+            <div class="input-area">
+                <div class="confirm-block input-block">
+                    <label>Your Name</label>
+                    <div id="nameCfm">NameArea</div>
+                    <div></div>
+                </div>
+                <div class="confirm-block input-block">
+                    <label>Your E-mail</label>
+                    <div id="emailCfm">emailArea</div>
+                    <div></div>
+                 </div>
+                <div class="confirm-block input-block">
+                    <label>Phone</label>
+                    <div id="phoneCfm">phoneArea</div>
+                </div>
+
+                <div class="confirm-block input-block">
+                    <label>MemberStatus</label>
+                    <div id="memberCfm">memberArea</div>
+                </div>
+
+                <div class="confirm-block input-block">
+                    <label>Contact Method</label>
+                    <div id="methodCfm">methodArea</div>
+                </div>
+
+                <div class="confirm-block input-block">
+                    <label>Message Subject</label>
+                    <div id="selectCfm">subjectArea</div>
+                    <div></div>
+                </div>
+                <div class="confirm-block input-block">
+                    <label>Message</label>
+                    <div id="textAreaCfm">msgArea</div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="buttonArea">
+                <button type="submit" id="BtSend">Submit</button>
+                <div class="btnStyleCnl"><a id="BtCancel">rewrite</a></div>
+            </div>
+            
+        </div>
+
+
+        </form>
+    </div>
+
+    <footer class="footer-wrapper">
+        <div class="footer-block container">
+            <p class="footer-text">(c)2019 @Maruo All Rights Reserved</p>
+            <div class="fa-icon-block">
+                <a href="https://twitter.com/DengenT?lang=ja" class="fa-icon"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <a href="https://github.com/IoT-Arduino/MyFitness"  class="fa-icon"><i class="fab fa-github-square fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="formScript.js"></script>
+</body>
+</html>
