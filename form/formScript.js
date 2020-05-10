@@ -6,7 +6,7 @@ document.getElementById('textArea').addEventListener('blur',validateTextArea);
 function validateName(){
     const name = document.getElementById('name');
     const nameError = document.getElementById('nameError')
-    const re = /^[a-zA-Z]{2,15}$/;
+    const re = /^\D{2,15}$/
 
     if(!re.test(name.value)){
         nameError.classList.add('is-invalid');
@@ -50,9 +50,9 @@ function validateSelect(){
 function validateTextArea(){
     const textArea = document.getElementById('textArea');
     const textError = document.getElementById('textError');
-    const re = /./;
+    const textAreaChars = textArea.value.length
 
-    if(!re.test(textArea.value)){
+    if(textAreaChars <= 0 || textAreaChars>201){
         textError.classList.add('is-invalid');
         textError.classList.remove('dsNone');
     } else {

@@ -8,7 +8,7 @@
 [MyFitnessTopPage](https://myfitness-site.netlify.app/)  
 [GoogleMapAPIを使用したページ](https://myfitness-site.netlify.app/map/index.html)  
 [SnipcartAPIを使用したカートページ](https://myfitness-site.netlify.app/cart/index.html)  
-
+[NetlifyFormsを使用したお問い合わせページ（確認画面付き）](https://myfitness-site.netlify.app/form/index.html)  
 
 ## 💫 コード解説記事
 
@@ -16,6 +16,7 @@
 
 [外付けカート(snipcart）機能を追加しました](https://myfrontend.netlify.app/add-snipcart)
 
+[NetlifyForm（確認画面付き）作成しました。Gmail連携機能（オプション）もあります。](https://myfrontend.netlify.app/netlify-zappier)
 
 ## 🧐 プログラム・フォルダ構成
 
@@ -23,7 +24,7 @@
 以下のページで外部APIを使用しています。
 - Mapページ:Google Maps JavaScript API
 - Cartページ:SnipcartAPI
-- formページ:NetlifyForm
+- formページ:NetlifyForm+Zappier
 
 index.html
 blog-post/
@@ -42,10 +43,10 @@ cart/
 　├ app.js  
 　└ style.css  
 form/  
-　├ form.html  
+　├ index.html  
 　├ thankyou.html  
-　├ form.js  
-　└ form.css  
+　├ formScript.js  
+　└ formStyle.css  
   
 1.  **`index.html`**: トップページ
   
@@ -66,7 +67,6 @@ form/
 * [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial?hl=ja)
 * [Snipcart Documentation](https://docs.snipcart.com/v3/)
 * [Netlify Forms](https://www.netlify.com/products/forms/)
-
 
 
 ## 🚀 Deploy
