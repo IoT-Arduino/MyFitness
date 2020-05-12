@@ -1,8 +1,13 @@
 const maplist = new Array()
 const maplistUl = document.getElementById("mapList")
 let maplistLi = document.querySelectorAll("#mapList li")
+const mapCanvas = document.getElementById("map_canvas")
 let currentWindow = null
 let cnt = 0
+const defaultIconUrl = "images/map-icon-gym-default.png"
+const currentIconUrl = "images/map-icon-gym.png"
+const defaultScaledSize = new google.maps.Size(30, 30)
+const currentScaledSize = new google.maps.Size(40, 40)
 
 //　LocationのJSONデータの取得
 class GetData {
@@ -44,38 +49,74 @@ function initMap() {
   )
 
   const markers = new GetData()
+
   // marker配列データからマーカーの作成およびli要素の作成
-  markers
-    .getLocation()
-    .then((items) => {
-      items.forEach((item) => {
-        const id = item.id
-        const name = item.title
-        const latlng = new google.maps.LatLng(item.latitude, item.longitude)
-        const address = item.address
-        const image = item.image
+  const createMarkers = () => {
+    markers
+      .getLocation()
+      .then((items) => {
+        items.forEach((item) => {
+          const id = item.id
+          const name = item.title
+          const latlng = new google.maps.LatLng(item.latitude, item.longitude)
 
-        createMarker(name, latlng, map, id)
+          const icons = {
+            url: defaultIconUrl,
+            scaledSize: defaultScaledSize,
+          }
 
-        maplistUl.innerHTML += `<li><img src=${image} /><div> <h4>${name}</h4> Address : ${address}</div></li>`
-      })
-    })
-    // 生成されたli要素へのイベントリスナーの付与。
-    .then(() => {
-      maplistLi = document.querySelectorAll("#mapList li")
-      maplistLi.forEach((listItem, index) => {
-        listItem.addEventListener("click", () => {
-          google.maps.event.trigger(maplist[index], "click")
+          const address = item.address
+          const image = item.image
+
+          createMarker(name, latlng, icons, map, id)
+
+          maplistUl.innerHTML += `<li><img src=${image} /><div> <h4>${name}</h4> Address : ${address}</div></li>`
         })
       })
-    })
+      // 生成されたli要素へのイベントリスナーの付与。
+      .then(() => {
+        maplistLi = document.querySelectorAll("#mapList li")
+        maplistLi.forEach((listItem, index) => {
+          listItem.addEventListener("click", () => {
+            google.maps.event.trigger(maplist[index], "click")
+          })
+        })
+      })
+  }
+
+  createMarkers()
 }
 
-//　markerをクリックしたときの処理
-function createMarker(name, latlng, map, id) {
+//　各マーカーのセット
+function createMarker(name, latlng, icons, map, id) {
   const infoWindow = new google.maps.InfoWindow()
-  const marker = new google.maps.Marker({ position: latlng, map: map })
+  const marker = new google.maps.Marker({
+    position: latlng,
+    icon: {
+      url: icons.url,
+      scaledSize: icons.scaledSize,
+    },
+    map: map,
+  })
 
+  console.log(icons.scaledSize)
+
+  // liリストをclickしたときに、他のアイコンを初期状態にする。
+  google.maps.event.addDomListener(maplistUl, "click", function () {
+    marker.setIcon({
+      url: defaultIconUrl,
+      scaledSize: icons.scaledSize,
+    })
+  })
+  // 新しくマーカーをclickしたときに、他のアイコンを初期状態にする。（※１）
+  google.maps.event.addDomListener(mapCanvas, "click", function () {
+    marker.setIcon({
+      url: defaultIconUrl,
+      scaledSize: icons.scaledSize,
+    })
+  })
+
+  //　markerをクリックしたときの処理
   google.maps.event.addListener(marker, "click", function (e) {
     // クリック済みのMakerに対応するliリストのCSS背景を初期化
     maplistLi.forEach((item) => {
@@ -83,19 +124,34 @@ function createMarker(name, latlng, map, id) {
         item.classList.remove("clicked")
       }
     })
+    //　clickしたマーカーのアイコンを変更する処理（※1の処理の後）
+    setTimeout(function () {
+      marker.setIcon({
+        url: currentIconUrl,
+        scaledSize: currentScaledSize,
+      })
+    }, 10)
 
+    // infowindow の処理
     if (currentWindow) {
       currentWindow.close()
     }
     infoWindow.setContent(name)
     infoWindow.open(map, marker)
     currentWindow = infoWindow
-    map.panTo(latlng) //markerをクリックした時に地図の中心に
+
+    //markerをクリックした時に地図の中心に
+    map.panTo(latlng)
 
     //　クリックされたMarkerに対応するli要素のcss背景を操作する。
     maplistLi[id - 1].classList.add("clicked")
   })
   maplist[cnt++] = marker
+
+  marker.setIcon({
+    url: defaultIconUrl,
+    scaledSize: icons.scaledSize,
+  })
 }
 
 google.maps.event.addDomListener(window, "load", initMap)
