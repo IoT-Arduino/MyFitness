@@ -103,6 +103,10 @@ form > div select {
   margin: 7px auto 7px 7px;
 }
 
+form > div select {
+  width: 65%;
+}
+
 form > div textarea {
   height: auto;
 }

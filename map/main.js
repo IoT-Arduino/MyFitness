@@ -130,7 +130,7 @@ function createMarker(name, latlng, icons, map, id) {
         url: currentIconUrl,
         scaledSize: currentScaledSize,
       })
-    }, 10)
+    }, 100)
 
     // infowindow の処理
     if (currentWindow) {
