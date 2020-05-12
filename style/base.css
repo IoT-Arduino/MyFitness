@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-size: 16px;
   background-color: #e5e5e5;
+  box-sizing : border-box;
 }
 
 /* Common */
