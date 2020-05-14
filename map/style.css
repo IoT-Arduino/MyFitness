@@ -45,6 +45,7 @@ body {
 
 .mapContainer {
   width: calc(100% - 20px);
+
   margin: 100px auto 80px;
 }
 
