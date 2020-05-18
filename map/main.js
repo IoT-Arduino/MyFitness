@@ -99,7 +99,6 @@ function createMarker(name, latlng, icons, map, id) {
     map: map,
   })
 
-  console.log(icons.scaledSize)
 
   // liリストをclickしたときに、他のアイコンを初期状態にする。
   google.maps.event.addDomListener(maplistUl, "click", function () {
@@ -108,13 +107,30 @@ function createMarker(name, latlng, icons, map, id) {
       scaledSize: icons.scaledSize,
     })
   })
+
   // 新しくマーカーをclickしたときに、他のアイコンを初期状態にする。（※１）
-  google.maps.event.addDomListener(mapCanvas, "click", function () {
+
+  let flag = false ;
+
+  google.maps.event.addDomListener(mapCanvas, "touchstart", function () {
+    flag = true;
     marker.setIcon({
       url: defaultIconUrl,
       scaledSize: icons.scaledSize,
     })
   })
+
+  google.maps.event.addDomListener(mapCanvas, "click", function () {
+    if (flag) {
+      flag = false;
+    } else {
+      marker.setIcon({
+        url: defaultIconUrl,
+        scaledSize: icons.scaledSize,
+      })
+    }
+  })
+
 
   //　markerをクリックしたときの処理
   google.maps.event.addListener(marker, "click", function (e) {
