@@ -38,11 +38,27 @@ class GetData {
 
 //　Mapの初期化
 function initMap() {
-  const myOptions = {
-    zoom: 13,
-    center: new google.maps.LatLng(37.789096, -122.40217),
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+   // Window サイズに応じて、mapオプションの表示、非表示切り替え
+  const myOptionsFunc = () => {
+    if(window.innerWidth < 500) {
+      console.log(window.innerWidth)
+      return {
+        zoom: 13,
+        disableDefaultUI: true,
+        center: new google.maps.LatLng(37.789096, -122.40217),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+      }
+    } else {
+      return {
+        zoom: 14,
+        center: new google.maps.LatLng(37.789096, -122.40217),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+      }
+    }
   }
+  const myOptions = myOptionsFunc()
+
   const map = new google.maps.Map(
     document.getElementById("map_canvas"),
     myOptions
@@ -109,7 +125,6 @@ function createMarker(name, latlng, icons, map, id) {
   })
 
   // 新しくマーカーをclickしたときに、他のアイコンを初期状態にする。（※１）
-
   let flag = false ;
 
   google.maps.event.addDomListener(mapCanvas, "touchstart", function () {
