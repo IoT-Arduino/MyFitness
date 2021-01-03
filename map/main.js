@@ -24,7 +24,7 @@ class GetData {
           longitude,
           address,
           id,
-          category,
+          category
         } = item.fields
         const image = item.fields.image.fields.file.url
         return { title, latitude, longitude, address, id, category, image }
@@ -86,7 +86,7 @@ function initMap() {
 
           createMarker(name, latlng, icons, map, id)
 
-          maplistUl.innerHTML += `<li><img src=${image} /><div> <h4>${name}</h4> Address : ${address}</div></li>`
+          maplistUl.innerHTML += `<li><img src=${image} /><div> <h4>${name}</h4> Address : ${address} </div></li>`
         })
       })
       // 生成されたli要素へのイベントリスナーの付与。
