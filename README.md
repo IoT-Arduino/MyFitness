@@ -10,6 +10,8 @@
 [SnipcartAPIを使用したカートページ](https://myfitness-site.netlify.app/cart/index.html)  
 [NetlifyFormsを使用したお問い合わせページ（確認画面付き）](https://myfitness-site.netlify.app/form/index.html)  
 
+![Fitness](https://user-images.githubusercontent.com/45728258/103495660-e634d500-4e7e-11eb-8703-c9bd03dbe622.jpg)
+
 ## 💫 コード解説記事
 
 [GoogleMap のマーカーと、HTMLのリストデータの連動（Vanilla JavaScript)](https://myfrontend.netlify.app/interactive-google-map-marker)
